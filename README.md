@@ -36,3 +36,6 @@ username: Cihad
 
 password: 123456
 
+You can find sample photos of the project under [src/asset/Sample](https://github.com/cihadceviz/eCommerance-Case/tree/main/src/assets/Sample) folder
+
+
