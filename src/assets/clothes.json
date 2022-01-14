@@ -1,0 +1,53 @@
+{
+    "clohtList":
+    [
+        {
+            "id": 1,
+            "name": "Black Sweat",
+            "description": "One hundred percent cotton. 3-Thread Stitch technique. Unprinted",
+            "price": 199,
+            "size": ["S Size","M Size","L Size"],
+            "imgPath":"src/assets/images/mock1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "GAP Sweat",
+            "description": "One hundred percent cotton. 3-Thread Stitch technique. Printed",
+            "price": 250,
+            "size": ["XS Size","S Size","M Size","L Size","XL Size"],
+            "imgPath":"src/assets/images/mock2.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Green Sweat",
+            "description": "One hundred percent cotton. 3-Thread Stitch technique. Printed",
+            "price": 199,
+            "size": ["XS Size","S Size","M Size"],
+            "imgPath":"src/assets/images/mock3.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Astronaut in Sky",
+            "description": "One hundred percent cotton. 3-Thread Stitch technique. Printed",
+            "price": 250,
+            "size": ["M Size","L Size","XL Size"],
+            "imgPath":"src/assets/images/mock4.jpg"
+        },
+        {
+            "id": 5,
+            "name": "White Rabbit",
+            "description": "One hundred percent cotton. 3-Thread Stitch technique. Printed",
+            "price": 250,
+            "size": ["XS Size","S Size","M Size","L Size","XL Size"],
+            "imgPath":"src/assets/images/mock5.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Grey Sweat",
+            "description": "One hundred percent cotton. 3-Thread Stitch technique. Printed",
+            "price": 150,
+            "size": ["XS Size","S Size","M Size","L Size"],
+            "imgPath":"src/assets/images/mock6.jpg"
+        }
+    ]
+}
