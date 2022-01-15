@@ -7,9 +7,9 @@ import * as UserList from '../assets/user'
 
 import styles from '../theme/LoginScreenStyle'
 
- 
 
-function Login(username, password,navigation){
+
+function Login(username, password, navigation){
     const users = UserList["users"]
     let userControl = false
     let userIndex = 0;
@@ -35,7 +35,7 @@ function Login(username, password,navigation){
 
 
 
-const Register = (username, password) =>{
+const Register = (username, password,) =>{
     const users = UserList["users"]
     let userControl = false
     if(username == "" && password == ""){
@@ -52,23 +52,28 @@ const Register = (username, password) =>{
     if (userControl == false) {
         Alert.alert(
             "Caution!",
-            "Are you sure you want to create a new user?",
+            "New User created",
             [
                 {
                   text: "Yes",
-                  onPress: () => {addUser(username,password,users.length)},
+                  onPress: () => {
+                        addUser(username,password,users.length)
                 },
-                {
-                text:"No",
-                onPress: () => {},
-                }
+                },
             ],
             );
+        return true
     }else{
-        return (
-            Alert.alert("Caution!","An account found with your username or password, please login")
-        );
+        Alert.alert("Caution!","An account found with your username or password, please login")
+        return false
     }
+}
+
+const PopAndLogin=(username, password,navigation)=>{
+    navigation.pop()
+    return true
+    
+
 }
 
 const addUser = (userName,passWord,lastId) =>{
@@ -80,6 +85,7 @@ const addUser = (userName,passWord,lastId) =>{
             "password": passWord
         }
         )
+    
 }
 
 const LoginPage = ({navigation}) =>{
@@ -126,7 +132,14 @@ const LoginPage = ({navigation}) =>{
                             <Text style={styles.ButtonText}>Sing in</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={()=>{Register(userName,passWord)}}>
+                    <TouchableOpacity onPress={()=>{
+                        const control = Register(userName,passWord)
+                        console.log(control)
+                        if (control == true) {
+                            PopAndLogin(userName,passWord, navigation) ? dispatch(sucsesslogin({"name":userName,"password": passWord})): null
+                        }
+                        
+                    }}>
                         <View style={styles.Button}>
                             <Text style={styles.ButtonText}>Register</Text>
                         </View>
